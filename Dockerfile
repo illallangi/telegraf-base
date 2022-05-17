@@ -24,13 +24,3 @@ COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 RUN chmod +x /entrypoint.sh
 CMD ["/usr/bin/telegraf"]
-
-
-
-
-COPY ./requirements.txt /usr/src/app/requirements.txt
-RUN python3 -m pip install --no-cache-dir -r /usr/src/app/requirements.txt
-
-COPY telegraf.conf /etc/telegraf/telegraf.conf
-
-COPY ./telegraf_stocks.py /usr/src/app/telegraf_stocks.py
