@@ -1,4 +1,4 @@
-FROM docker.io/library/python:3.10.4
+FROM docker.io/library/python:3.11.0b3
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 ENV PYTHONUNBUFFERED=1 \
